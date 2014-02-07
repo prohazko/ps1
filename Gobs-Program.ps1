@@ -7,9 +7,9 @@ $ui.ForegroundColor = "green"
 $n = [environment]::newLine    
 try{
     Clear-Host
-    Write-Host ("`n" * $ui.windowSize.height )
+    Write-Host ($n * $ui.windowSize.height )
     Write-Host "Gob's Program: Y/N?" 
-    Write-Host '? ' -non 
+    Write-Host '? ' -noNewLine 
 
     $press = [console]::readKey() 
 
@@ -20,7 +20,7 @@ try{
     Write-Host $n
     $penusCount = 0
     for( ;;){
-        Write-Host "Penus " -noNewLine 
+        Write-Host 'Penus ' -noNewLine 
         Start-Sleep -m  ( [int] ([math]::log($penusCount + 1) / 15)  ) 
         $penusCount++
         if($penusCount % 6 -eq 0 ) { Write-Host '' }
