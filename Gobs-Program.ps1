@@ -13,6 +13,7 @@ try{
     $press = [console]::readKey() 
 
     if( -not ($press.keyChar -match 'y') ) {
+        Write-Host "`n`n`n COME ON !"
         Exit
     }
 
@@ -29,4 +30,3 @@ try{
    $ui.BackgroundColor = $prevBackColor
    $ui.ForegroundColor = $prevForeColor
 }
- 
