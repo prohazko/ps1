@@ -3,7 +3,8 @@ $prevBackColor = $ui.BackgroundColor
 $prevForeColor = $ui.ForegroundColor
 $ui.BackgroundColor = "black"
 $ui.ForegroundColor = "green"
-    
+
+$n = [environment]::newLine    
 try{
     Clear-Host
     Write-Host ("`n" * $ui.windowSize.height )
@@ -13,11 +14,10 @@ try{
     $press = [console]::readKey() 
 
     if( -not ($press.keyChar -match 'y') ) {
-        Write-Host "`n`n`n COME ON !"
         Exit
     }
 
-    Write-Host "`n"
+    Write-Host $n
     $penusCount = 0
     for( ;;){
         Write-Host "Penus " -noNewLine 
@@ -26,7 +26,7 @@ try{
         if($penusCount % 6 -eq 0 ) { Write-Host '' }
     }
 }finally{
-   Write-Host "`n"
+   Write-Host "$($n*3)  COME ON !  $($n*2)"
    $ui.BackgroundColor = $prevBackColor
    $ui.ForegroundColor = $prevForeColor
 }
