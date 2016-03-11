@@ -8,4 +8,3 @@ Nothing to see here.
 * Get-Movie.ps1 - Get random unrated movie from your IMDB watchlist
  
 
-<p style="transform:rotate(15deg)">test</p>
